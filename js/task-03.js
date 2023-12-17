@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const container = document.getElementsByClassName("gallery")[0];
+let text = "";
+
+images.forEach(el => {
+  text += `<li><img src="${el.url}" alt="${el.alt}"></img></li>`
+})
+
+container.insertAdjacentHTML("afterBegin", text);
+
