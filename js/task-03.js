@@ -17,11 +17,11 @@ function createGallery() {
   const container = document.getElementsByClassName("gallery")[0];
   if (!container) { return "Контейней не найден"; }
 
-  let text = "";
+  let html = "";
   images.forEach(el => {
-    text += `<li><img src="${el.url}" alt="${el.alt}"></img></li>`
+    html += `<li><img src="${el.url}" alt="${el.alt}"></img></li>`
   })
-  container.insertAdjacentHTML("afterBegin", text);
+  container.insertAdjacentHTML("afterBegin", html);
 }
 
 createGallery();
