@@ -13,12 +13,16 @@ const images = [
   },
 ];
 
-const container = document.getElementsByClassName("gallery")[0];
-let text = "";
+function createGallery() {
+  const container = document.getElementsByClassName("gallery")[0];
+  if (!container) { return "Контейней не найден"; }
 
-images.forEach(el => {
-  text += `<li><img src="${el.url}" alt="${el.alt}"></img></li>`
-})
+  let text = "";
+  images.forEach(el => {
+    text += `<li><img src="${el.url}" alt="${el.alt}"></img></li>`
+  })
+  container.insertAdjacentHTML("afterBegin", text);
+}
 
-container.insertAdjacentHTML("afterBegin", text);
+createGallery();
 

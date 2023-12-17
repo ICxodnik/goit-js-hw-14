@@ -4,7 +4,6 @@ const span = document.getElementById("name-output");
 input.addEventListener("input", onInput);
 
 function onInput(e) {
-    console.log(e);
     if (!e.target.value) {
         setValue(span, "Anonymous");
     }
@@ -14,6 +13,5 @@ function onInput(e) {
 }
 
 function setValue(el, value) {
-    console.log(el);
     el.innerText = value;
 }
