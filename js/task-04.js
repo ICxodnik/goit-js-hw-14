@@ -1,10 +1,10 @@
 const decrement = document.querySelector('[data-action="decrement"]');
 const increment = document.querySelector('[data-action="increment"]');
-const value = document.getElementById('value');
+const value = document.getElementById("value");
 
 let counterValue = value.innerText ?? 0; //let counterValue = 0;
 
-document.querySelector("#counter").addEventListener("click", function onChange(e) {
+document.getElementById("counter").addEventListener("click", function onClick(e) {
 
     switch (e.target.dataset.action) {
         case "increment":
